@@ -1,4 +1,40 @@
-# Fluxo-Finan-as
-Um projeto de software que se consiste numa plataforma financeira com um chatbot IA.
+# Fluxo Finanças
 
-exemplo
+Plataforma web para gerenciamento e análise financeira com assistente IA.
+
+## Sobre o projeto
+
+Em breve.
+
+## Funcionalidades
+
+Em desenvolvimento.
+
+## Tecnologias
+
+- PHP
+- MySQL
+- JavaScript
+- HTML
+- CSS
+- Bootstrap
+
+## Arquitetura
+
+O projeto utilizará o padrão arquitetural MVC (Model-View-Controller).
+
+## Equipe
+
+Artur de Assis
+Juan Oliveira
+Lavínia Zica
+Sarah Alves
+Thaís Vitória
+
+## Como executar o projeto
+
+Em breve.
+
+## Status
+
+🚧 Em desenvolvimento
