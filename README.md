@@ -8,7 +8,10 @@ Em breve.
 
 ## Funcionalidades
 
-Em desenvolvimento.
+- chatbot IA
+- Registro de transações
+- histórico de transações
+- dashboard
 
 ## Tecnologias
 
