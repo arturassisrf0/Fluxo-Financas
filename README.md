@@ -25,11 +25,11 @@ O projeto utilizará o padrão arquitetural MVC (Model-View-Controller).
 
 ## Equipe
 
-Artur de Assis
-Juan Oliveira
-Lavínia Zica
-Sarah Alves
-Thaís Vitória
+Artur de Assis - Backend 
+Juan Oliveira - Backend 
+Lavínia Zica - Backend
+Sarah Alves - Frontend 
+Thaís Vitória - Frontend
 
 ## Como executar o projeto
 
