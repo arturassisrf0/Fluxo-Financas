@@ -1,6 +1,6 @@
 <?php
 
-class TransacoesModel
+class TransacaoModel
 {
 
     public function listar()
