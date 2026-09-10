@@ -4,7 +4,7 @@ Plataforma web para gerenciamento e análise financeira com assistente IA.
 
 ## Sobre o projeto
 
-Em breve.
+Em breve mais detalhes.
 
 ## Funcionalidades
 
