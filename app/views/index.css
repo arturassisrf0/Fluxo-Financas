@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --teal-base: #20c997;
+    --teal-100: #d1fae5;
+    --teal-200: #a7f3d0;
+    --teal-300: #6ee7b7;
+    --teal-400: #34d399;
+    --teal-500: #10b981;
+    --teal-600: #059669;
+    --teal-700: #047857;
+    --teal-800: #065f46;
+    --teal-900: #064e3b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+}
+
+/* --- Layout Principal (Split Screen) --- */
+.login-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Lado Esquerdo (Design) */
+.side-panel {
+    width: 50%;
+    background: linear-gradient(135deg, var(--teal-900), var(--teal-700));
+    position: relative;
+    overflow: hidden;
+    padding: 4rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Padrão de bolinhas sutil */
+.side-panel-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: radial-gradient(var(--teal-100) 1px, transparent 1px);
+    background-size: 24px 24px;
+    z-index: 0;
+}
+
+.side-panel-content {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+}
+
+/* Ícone do Logo */
+.logo-icon {
+    width: 56px;
+    height: 56px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    letter-spacing: -0.5px;
+}
+
+/* Mini Gráfico Decorativo */
+.mini-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    height: 80px;
+}
+
+.mini-chart .bar {
+    width: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px 4px 0 0;
+    transition: all 0.3s;
+}
+
+.mini-chart .bar.active {
+    background-color: var(--teal-300);
+    box-shadow: 0 0 15px rgba(110, 231, 183, 0.5);
+}
+
+/* Lado Direito (Formulário) */
+.form-panel {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 420px; /* Limita a largura do form para não esticar demais */
+}
+
+/* --- Estilos dos Inputs (Bootstrap Override) --- */
+.form-control {
+    background-color: transparent;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.form-control:focus {
+    background-color: white;
+    border-color: var(--teal-500);
+    box-shadow: 0 0 0 4px var(--teal-100);
+}
+
+.input-group-text {
+    border: 1px solid #e5e7eb;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    background-color: transparent;
+}
+
+.input-group .form-control {
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+}
+
+.input-group:focus-within .input-group-text {
+    border-color: var(--teal-500);
+}
+
+/* --- Botões --- */
+.btn-teal-primary {
+    background-color: var(--teal-600);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-teal-primary:hover {
+    background-color: var(--teal-700);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+/* --- Cores Utilitárias --- */
+.text-teal-300 { color: var(--teal-300) !important; }
+.text-teal-500 { color: var(--teal-500) !important; }
+.text-teal-600 { color: var(--teal-600) !important; }
+.text-teal-900 { color: var(--teal-900) !important; }
+
+/* --- Responsividade --- */
+@media (max-width: 991.98px) {
+    .side-panel {
+        display: none !important;
+    }
+    
+    .form-panel {
+        width: 100%;
+    }
+    
+    .form-wrapper {
+        max-width: 100%;
+        padding: 1rem;
+    }
+}
