@@ -1,0 +1,113 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f9fafb; /* Fundo cinza bem claro */
+}
+
+/* Container Principal do Header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 12px 24px;
+    border-bottom: 1px solid #e5e7eb; /* Linha cinza suave embaixo */
+    height: 70px;
+}
+
+/* --- Lado Esquerdo --- */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Espaço entre logo e menu */
+}
+
+/* Estilo do Logo (Quadrado Preto) */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 8px; /* Bordas arredondadas */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Menu de Navegação */
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #4b5563; /* Cinza escuro */
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-item:hover {
+    color: #000;
+}
+
+/* Estilo do item ativo (Overview) - Opcional */
+.nav-item.active {
+    color: #6b7280; /* Cinza mais claro na imagem original */
+}
+
+/* --- Lado Direito --- */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Caixa de Pesquisa */
+.search-box input {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    width: 200px;
+    color: #374151;
+    transition: border-color 0.2s;
+}
+
+.search-box input::placeholder {
+    color: #9ca3af;
+}
+
+.search-box input:focus {
+    border-color: #000;
+}
+
+/* Perfil do Usuário */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    object-fit: cover;
+}
+
+.user-profile i {
+    font-size: 12px;
+    color: #374151;
+}

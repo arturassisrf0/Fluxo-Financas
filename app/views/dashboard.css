@@ -1,0 +1,322 @@
+/* Importação da Fonte Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* --- 1. DEFINIÇÃO DA PALETA DE CORES (TEAL) --- */
+:root {
+    --teal-base: #20c997;
+    --teal-100: #d1fae5;
+    --teal-200: #a7f3d0;
+    --teal-300: #6ee7b7;
+    --teal-400: #34d399;
+    --teal-500: #10b981;
+    --teal-600: #059669;
+    --teal-700: #047857;
+    --teal-800: #065f46;
+    --teal-900: #064e3b;
+
+    /* Cores de Fundo e Texto */
+    --bg-body: #f8fafc; /* Cinza levemente azulado, mais limpo que o #f9fafb */
+    --bg-white: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    
+    /* Sombras Suaves */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* Reset e Tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* --- 2. HEADER / NAVBAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-white);
+    padding: 12px 24px;
+    border-bottom: 1px solid var(--border-color);
+    height: 70px;
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    position: relative;
+}
+
+/* Lado Esquerdo */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* LOGO - Aplicando o Teal 800 (Escuro e elegante) */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--teal-800); /* Fundo escuro */
+    color: var(--teal-300); /* Ícone claro */
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    background-color: var(--teal-600);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Menu de Navegação */
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+    position: relative;
+}
+
+.nav-item:hover {
+    color: var(--teal-700);
+}
+
+/* Item Ativo com Sublinhado Teal */
+.nav-item.active {
+    color: var(--teal-700);
+    font-weight: 600;
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -24px; /* Alinha com a borda inferior do header */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--teal-500);
+    border-radius: 3px 3px 0 0;
+}
+
+/* Lado Direito */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Caixa de Pesquisa */
+.search-box input {
+    padding: 10px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    width: 240px;
+    color: var(--text-main);
+    transition: all 0.2s;
+    background-color: #f8fafc;
+}
+
+.search-box input::placeholder {
+    color: #94a3b8;
+}
+
+.search-box input:focus {
+    background-color: white;
+    border-color: var(--teal-500);
+    box-shadow: 0 0 0 4px var(--teal-100);
+}
+
+/* Perfil do Usuário */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.user-profile:hover {
+    background-color: #f1f5f9;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--teal-200);
+}
+
+.user-profile i {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* --- 3. SIDEBAR --- */
+.sidebar {
+    background-color: var(--bg-white) !important;
+    border-right: 1px solid var(--border-color);
+    min-height: calc(100vh - 70px); /* Ocupa a altura restante */
+}
+
+.sidebar-sticky {
+    padding-top: 1.5rem;
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0 8px 8px 0; /* Arredonda só a direita */
+    margin-right: 1rem;
+    border-left: 4px solid transparent; /* Reserva espaço para a borda ativa */
+    transition: all 0.2s;
+}
+
+/* Ícones (Feather) */
+.sidebar .nav-link .feather {
+    margin-right: 12px;
+    color: #94a3b8;
+    width: 18px;
+    height: 18px;
+    transition: color 0.2s;
+}
+
+/* Hover na Sidebar */
+.sidebar .nav-link:hover {
+    background-color: #f8fafc;
+    color: var(--teal-700);
+}
+
+.sidebar .nav-link:hover .feather {
+    color: var(--teal-600);
+}
+
+/* Item ATIVO na Sidebar */
+.sidebar .nav-link.active {
+    background-color: var(--teal-100); /* Fundo Teal bem clarinho */
+    color: var(--teal-800); /* Texto Teal escuro */
+    border-left-color: var(--teal-600); /* Borda lateral marcante */
+    font-weight: 600;
+}
+
+.sidebar .nav-link.active .feather {
+    color: var(--teal-700);
+}
+
+/* Títulos das Seções da Sidebar */
+.sidebar-heading {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+    font-weight: 600;
+    padding: 0 1.5rem;
+}
+
+/* --- 4. CONTEÚDO PRINCIPAL --- */
+main {
+    padding-top: 1.5rem;
+    background-color: var(--bg-body);
+    min-height: calc(100vh - 70px);
+}
+
+/* Título do Dashboard */
+main h1.h2 {
+    font-weight: 700;
+    color: var(--teal-900);
+}
+
+/* Botões da Toolbar */
+.btn-outline-secondary {
+    color: var(--text-muted);
+    border-color: var(--border-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem;
+    transition: all 0.2s;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--teal-50);
+    border-color: var(--teal-300);
+    color: var(--teal-700);
+}
+
+/* Tabela */
+.table {
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.table thead th {
+    background-color: #f8fafc;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+}
+
+.table tbody td {
+    padding: 1rem;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8fafc;
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--teal-50);
+}
+
+/* --- 5. RESPONSIVIDADE --- */
+@media (max-width: 767.98px) {
+    .navbar {
+        padding: 10px 16px;
+    }
+    
+    .nav-links {
+        display: none; /* Esconde os links no mobile para não quebrar */
+    }
+    
+    .search-box input {
+        width: 160px;
+    }
+    
+    .sidebar {
+        min-height: auto;
+    }
+}

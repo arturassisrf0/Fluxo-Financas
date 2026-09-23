@@ -175,7 +175,11 @@ body {
     }
     
     .form-wrapper {
-        max-width: 100%;
-        padding: 1rem;
+        padding: 2rem 0; /* Dá um respiro em cima e embaixo */
     }
+    
+    .form-check-label {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
 }
